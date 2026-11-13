@@ -32,6 +32,9 @@ Replace this section with detailed, testable statements of what the system must 
 | REQ-2.1| FEAT-2| Click to unblur - only reveals 1 score at a time, after confirmation|
 | REQ-2.2| FEAT-2| When a game is marked as _watched,_ all tabs/sites show that score|
 | REQ-2.3| FEAT-2| Ability to pause game blocking, on current site or on all sites|
+| REQ-3.1| FEAT-3| Schedule refreshes every 3 hours|
+| REQ-3.2| FEAT-all| Default to blurring until game ends|
+| REQ-3.3|| User can change default; set custom timeframe to keep blurring score|
 
 ## Non-Functional Requirements
 
