@@ -28,25 +28,22 @@ Privacy claims require care: SpoilerProtection’s listing mentions anonymous an
 
 ### Development References
 
-Chrome content scripts: reading and modifying web pages for filtering.
-TheSportsDB API documentation: sports schedule endpoints, authentication, and access limits.
-PandaScore API documentation: esports fixtures, opponents, and scheduled times.
-PandaScore pricing: currently lists a free schedules/results plan with 1,000 requests per hour. Confirm both providers’ coverage, terms, and limits before integration.
+- Chrome content scripts: reading and modifying web pages for filtering.
+- TheSportsDB API documentation: sports schedule endpoints, authentication, and access limits.
+- PandaScore API documentation: esports fixtures, opponents, and scheduled times.
+- PandaScore pricing: currently lists a free schedules/results plan with 1,000 requests per hour. Confirm both providers’ coverage, terms, and limits before integration.
 
 ## Required Resources
 
 - [Chrome content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts): reading and modifying web pages for filtering.
 - [TheSportsDB API documentation](https://www.thesportsdb.com/documentation): sports schedule endpoints, authentication, and access limits.
 - [PandaScore API documentation](https://developers.pandascore.co/docs/introduction): esports fixtures, opponents, and scheduled times.
-- [PandaScore pricing](https://www.pandascore.co/pricing): currently lists a free schedules/results plan with 1,000 requests per hour. Confirm both providers' coverage, terms, and limits before integration.- [Chrome content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts): reading and modifying web pages for filtering.
-- [TheSportsDB API documentation](https://www.thesportsdb.com/documentation): sports schedule endpoints, authentication, and access limits.
-- [PandaScore API documentation](https://developers.pandascore.co/docs/introduction): esports fixtures, opponents, and scheduled times.
 - [PandaScore pricing](https://www.pandascore.co/pricing): currently lists a free schedules/results plan with 1,000 requests per hour. Confirm both providers' coverage, terms, and limits before integration.
 
 ## Contributors
 
-Samuel Kritz - https://github.com/samuel-kritz
-Caleb Chung - https://github.com/Mythicalhoppa
-Daniel Bicalho - https://github.com/dbicalho1
-Elison Koltraka - https://github.com/elison100
-
+- [Samuel Kritz](https://github.com/samuel-kritz)
+- [Caleb Chung](https://github.com/Mythicalhoppa)
+- [Daniel Bicalho](https://github.com/dbicalho1)
+- [Davit Sagrishvili](https://github.com/davethebuilder36)
+- [Elison Koltraka](https://github.com/elisonkk)
