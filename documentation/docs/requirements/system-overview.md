@@ -3,14 +3,12 @@ sidebar_position: 1
 ---
 
 # System Overview
-
-:::caution Starter content - Requirements assignment
-This page is not ready for submission until your team replaces this starter outline with a project-specific overview and removes this callout.
-
 - Explain the project's goals, what the application will accomplish, and why users should use it.
 - Include a project abstract, top-level requirements, conceptual design, required resources, and background references.
 - Compare your approach to similar products or projects in plain, professional language.
-:::
+
+StopSpoilers can blur out sports scores in a web browser.  Many fans wait until they get home from work to watch a game, and there's nothing worse than accidentally ruining the result when you've waited all day to watch your team.  It's also useful for fans in different time zones that don't watch sports live, or for people who simply wait until the end of a game to skip commercials and don't want spoilers.  
+
 
 ## Purpose
 
