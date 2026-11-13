@@ -18,15 +18,20 @@ Replace this section with high-level services the system provides to users. A fe
 
 | Feature ID | Feature | User Value |
 | --- | --- | --- |
-| FEAT-1 | Replace with a project feature | Replace with why this matters to a user |
-
+| FEAT-1 | Set list of favorites, a **watch-list** | To block unseen scores - <u>No Spoilers!</u>|
+| FEAT-2| Mark games **watched** or **unwatched**| Synchronization across all active tabs and websites|
+| FEAT-3| Display a match schedule| See upcoming games sorted by time|
 ## Functional Requirements
 
 Replace this section with detailed, testable statements of what the system must do. Each feature should map to one or more functional requirements.
 
 | Requirement ID | Related Feature | Requirement |
 | --- | --- | --- |
-| REQ-1.1 | FEAT-1 | Replace with a specific behavior the system shall provide |
+| REQ-1.1 | FEAT-1 | From supported sports leagues, select team(s) |
+| REQ-1.2| FEAT-1| On supported websites, blur out scores or overlay with black box|
+| REQ-2.1| FEAT-2| Click to unblur - only reveals 1 score at a time, after confirmation|
+| REQ-2.2| FEAT-2| When a game is marked as _watched,_ all tabs/sites show that score|
+| REQ-2.3| FEAT-2| Ability to pause game blocking, on current site or on all sites|
 
 ## Non-Functional Requirements
 
