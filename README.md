@@ -28,7 +28,7 @@ List required hardware, software, services, data, and specialist knowledge.
 
 ## Contributors
 
-Samuel Kritz - https://github.com/samuel-kritz
-Caleb Chung - https://github.com/Mythicalhoppa
-Daniel Bicalho - https://github.com/dbicalho1
+- [Samuel Kritz](https://github.com/samuel-kritz)
+- [Caleb Chung](https://github.com/Mythicalhoppa)
+- [Daniel Bicalho](https://github.com/dbicalho1)
 - [Davit Sagrishvili](https://github.com/davethebuilder36)
