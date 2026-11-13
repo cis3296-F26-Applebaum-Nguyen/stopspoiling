@@ -22,6 +22,8 @@ Summarize software architecture, platforms, languages, and major integrations.
 
 Describe related systems, research, and important differences from existing work.
 
+Elison Koltraka
+
 ## Required Resources
 
 List required hardware, software, services, data, and specialist knowledge.
