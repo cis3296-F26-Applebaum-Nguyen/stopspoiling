@@ -33,7 +33,9 @@ cd documentation && yarn install && yarn start   # dev server
 cd documentation && yarn build
 ```
 
-Code (once the monorepo exists): `npm install`, `npm test`, `npm run lint`, `npm run typecheck`, `npm run test:e2e`.
+Code (once the monorepo exists): `yarn install`, `yarn test`, `yarn lint`, `yarn typecheck`, `yarn test:e2e`.
+
+**Package manager: yarn only** (classic, 1.22.22). Run `corepack enable` once per machine and use Node 20. Never run `npm install` or commit a `package-lock.json`. `documentation/` is its own yarn project with its own `yarn.lock`.
 
 ## Rules for Claude
 
