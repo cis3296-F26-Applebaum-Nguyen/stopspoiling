@@ -30,3 +30,4 @@ List required hardware, software, services, data, and specialist knowledge.
 
 Samuel Kritz - https://github.com/samuel-kritz
 Caleb Chung - https://github.com/Mythicalhoppa
+Daniel Bicalho - https://github.com/dbicalho1
