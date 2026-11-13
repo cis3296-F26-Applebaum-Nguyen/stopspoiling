@@ -5,3 +5,7 @@ documentation/build
 documentation/.cache
 .DS_Store
 .env.local
+
+# Local tooling output
+.idea/
+skills/
