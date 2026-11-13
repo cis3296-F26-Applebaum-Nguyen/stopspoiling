@@ -29,3 +29,4 @@ List required hardware, software, services, data, and specialist knowledge.
 ## Contributors
 
 Samuel Kritz - https://github.com/samuel-kritz
+Caleb Chung - https://github.com/Mythicalhoppa
