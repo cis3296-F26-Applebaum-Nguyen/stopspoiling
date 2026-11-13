@@ -9,7 +9,11 @@
     "cli": "1.0.0-next.5"
   },
   "packageTargets": {},
-  "sections": {},
+  "sections": {
+    "requirements": {
+      "sourceVersion": "1.0.0-beta.1"
+    }
+  },
   "files": {
     ".devcontainer/devcontainer.json": {
       "owner": "template",
@@ -135,6 +139,36 @@
       "owner": "content-core",
       "sourceVersion": "1.0.0-beta.1",
       "sourceHash": "8164ffd4548ff1b09c47b44258ee90c36d2032479bc5b7a68840d2afc8891ae5"
+    },
+    "documentation/docs/requirements/_category_.json": {
+      "owner": "section:requirements",
+      "sourceVersion": "1.0.0-beta.1",
+      "sourceHash": "af18e682b7d4026dde8366dc56f451ec7d81af958d0c06d626d5e11c4b14238b"
+    },
+    "documentation/docs/requirements/features-and-requirements.md": {
+      "owner": "section:requirements",
+      "sourceVersion": "1.0.0-beta.1",
+      "sourceHash": "bc85a40d291b6f87f2e2a5325992e753ec8a6272e739a6a88c9ad9f527a36fbe"
+    },
+    "documentation/docs/requirements/general-requirements.md": {
+      "owner": "section:requirements",
+      "sourceVersion": "1.0.0-beta.1",
+      "sourceHash": "da1ce506fba3e77523c52fbf51312e649ce4440ee36edbb04208491463152189"
+    },
+    "documentation/docs/requirements/system-block-diagram.md": {
+      "owner": "section:requirements",
+      "sourceVersion": "1.0.0-beta.1",
+      "sourceHash": "e847de9d091b1dfd218859ee4793992b633d139dec18dab8c40bdc954c1eea94"
+    },
+    "documentation/docs/requirements/system-overview.md": {
+      "owner": "section:requirements",
+      "sourceVersion": "1.0.0-beta.1",
+      "sourceHash": "da3592353e324ff9dc16adc747a852ef29a7780cfcbadc7a59e5b3fe9c4e42a9"
+    },
+    "documentation/docs/requirements/use-case-descriptions.md": {
+      "owner": "section:requirements",
+      "sourceVersion": "1.0.0-beta.1",
+      "sourceHash": "34827d25fe7477c3729434719881556f4b54c9a3b7e4f7ebd720bb4dbc93f7e9"
     }
   },
   "conflicts": {}
