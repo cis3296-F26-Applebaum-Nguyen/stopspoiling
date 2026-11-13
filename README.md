@@ -28,4 +28,4 @@ List required hardware, software, services, data, and specialist knowledge.
 
 ## Contributors
 
-List team members and link their GitHub profiles.
+Samuel Kritz - https://github.com/samuel-kritz
