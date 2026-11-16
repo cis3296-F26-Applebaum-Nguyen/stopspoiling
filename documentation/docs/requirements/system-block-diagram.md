@@ -2,54 +2,97 @@
 sidebar_position: 2
 ---
 
-# System Block Diagram
+# StopSpoiling System Architecture
 
-:::caution Starter content - Requirements assignment
-This page is not ready for submission until your team replaces this starter outline with a project-specific system block diagram and removes this callout.
+StopSpoiling has two main parts: a schedule updater and a Chrome extension. The updater collects game schedules, and the extension uses those schedules to decide what content might contain spoilers.
 
-- Show the major functional blocks of the system and how they interact.
-- Include enough technical detail to communicate the chosen architecture and tech stack.
-- Explain the flow of data, signals, or control between blocks.
-:::
-
-## System Block Diagram
-
-Replace this section with a high-level flowchart or diagram of the major components of your system. Mermaid is preferred when it communicates the system clearly because it is easy to update in version control.
+## How the Parts Work Together
 
 ```mermaid
 flowchart LR
-  subgraph GH[GitHub]
-    A[Schedule Updater<br/>Node + TS<br/>GitHub Actions cron] -->|writes| B[(schedule.json<br/>GitHub Pages)]
-  end
-  APIs[(Sports data APIs<br/>TheSportsDB / ESPN)] --> A
-  subgraph EXT[Chrome Extension - MV3]
-    C[Service Worker<br/>fetch + cache schedule<br/>alarms]
-    D[(chrome.storage<br/>sync: settings<br/>local: schedule, watched)]
-    E[Popup + Options<br/>React]
-    F[Content Script<br/>MutationObserver<br/>Site Adapter + Blur]
-    G[Matching Engine<br/>pure TS]
-  end
-  B -->|fetch every 3h| C
-  C --> D
-  E <--> D
-  D -->|onChanged| F
-  F --> G
-  F -->|blur / reveal| W[Web pages]
+    API[Sports APIs] --> UPDATER[Schedule Updater]
+    UPDATER --> JSON[schedule.json on GitHub Pages]
+    JSON --> WORKER[Background Service Worker]
+    WORKER --> STORAGE[Chrome Storage]
+    STORAGE --> POPUP[React Popup]
+    STORAGE --> CONTENT[Content Script]
+    CONTENT --> WEB[Webpages]
 ```
 
-## Component Notes
+### React Popup
 
-Describe each major block, such as user interfaces, services, hardware modules, databases, or external systems.
+The popup is what the user sees when opening the extension. It shows today's games and lets the user choose teams, add custom keywords, pause protection, and mark games as watched.
 
-| Component | Responsibility | Tech |
-|---|---|---|
-| **Schedule Updater** | Fetch schedules from data sources, convert them to the shared format, check them, publish `schedule.json` | Node 20+, TypeScript, GitHub Actions, GitHub Pages |
-| **Service Worker** | Download and cache the schedule on a timer (`chrome.alarms`), handle "refresh now", update the badge | MV3 background service worker |
-| **Popup / Options** | Team picker, Watch List, Watched button, pause toggles, keywords, settings | React + TypeScript |
-| **Content Script** | Runs at page start, finds content items, sends their text to the engine, blurs and reveals, watches for page changes | TypeScript, MutationObserver, CSS |
-| **Matching Engine** | Pure function: text + active games → block decision + reasons. **No DOM, no Chrome APIs**, so it's easy to unit test | TypeScript |
-| **Shared package** | Types, Zod schemas, team name/alias data | TypeScript, Zod |
+The popup does not scan webpages or download schedules directly.
 
-## Interconnections
+### Content Script
 
-Explain what each line or arrow represents, including data flow, control flow, external requests, or hardware signals.
+The content script runs on websites such as Google, YouTube, Reddit, X, and ESPN. It checks page text for team names, scores, and result-related words. When it finds a possible spoiler, it blurs that content.
+
+It also uses a `MutationObserver` to check new content that appears while the user scrolls.
+
+### Background Service Worker
+
+The background service worker downloads the latest schedule from GitHub Pages and saves it in Chrome storage. It also manages watched games and shares stored data with the popup and content script.
+
+## Schedule Flow
+
+1. GitHub Actions runs the Node.js schedule updater.
+2. The updater requests games from a sports API.
+3. The games are converted into one shared format.
+4. The updater publishes `schedule.json` on GitHub Pages.
+5. The background service worker downloads and stores the schedule.
+6. The popup displays the games.
+7. The content script uses the schedule to find possible spoilers.
+
+## Shared Game Format
+
+Every part of the project uses the same game structure:
+
+```ts
+interface Game {
+  id: string;
+  league: string;
+  homeTeam: string;
+  awayTeam: string;
+  startTime: string;
+}
+```
+
+The ID must stay the same when the schedule is refreshed. When possible, it will use the API provider and event ID:
+
+```text
+thesportsdb:2085437
+```
+
+This lets the popup, service worker, and content script recognize the same game.
+
+## Watched Games
+
+When the user marks a game as watched, its ID is added to an array in `chrome.storage.local`:
+
+```json
+{
+  "watchedGameIds": ["thesportsdb:2085437"]
+}
+```
+
+The content script ignores watched games but continues blocking spoilers for other games.
+
+## Suggested Folders
+
+```text
+extension/src/
+├── popup/        React popup
+├── background/   Service worker
+├── content/      Webpage scanning and blurring
+├── matching/     Spoiler-matching rules
+└── shared/       Game types, storage types and messages
+
+updater/src/
+├── providers/    Sports API connections
+├── normalize.ts  Converts API data
+└── index.ts      Runs the updater
+```
+
+This separation allows different team members to work on the popup, content script, schedule updater, and matching engine without editing the same files.
