@@ -33,6 +33,8 @@ Privacy claims require care: SpoilerProtection’s listing mentions anonymous an
 - PandaScore API documentation: esports fixtures, opponents, and scheduled times.
 - PandaScore pricing: currently lists a free schedules/results plan with 1,000 requests per hour. Confirm both providers’ coverage, terms, and limits before integration.
 
+Elison Koltraka
+
 ## Required Resources
 
 - [Chrome content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts): reading and modifying web pages for filtering.
