@@ -1,0 +1,9 @@
+{
+  "name": "@stopspoiling/schedule-updater",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "dependencies": { "@stopspoiling/shared": "0.0.0" },
+  "devDependencies": { "@types/node": "20.19.0" }
+}
