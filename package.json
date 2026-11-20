@@ -1,0 +1,13 @@
+{
+  "name": "stopspoiling",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "engines": { "node": ">=20" },
+  "workspaces": ["apps/*", "packages/*", "services/*"],
+  "scripts": {
+    "typecheck": "yarn workspaces run typecheck"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

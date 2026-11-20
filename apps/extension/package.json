@@ -1,0 +1,11 @@
+{
+  "name": "@stopspoiling/extension",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "dependencies": {
+    "@stopspoiling/engine": "0.0.0",
+    "@stopspoiling/shared": "0.0.0"
+  }
+}
