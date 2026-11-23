@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "league": "NBA",
+  "generatedAt": "2026-11-23T19:40:43Z",
+  "games": [
+    { "id": "tsdb:2601901", "league": "NBA", "homeTeamId": "nba-nyk", "awayTeamId": "nba-por", "startTimeUtc": "2026-11-22T00:30:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601902", "league": "NBA", "homeTeamId": "nba-dal", "awayTeamId": "nba-lac", "startTimeUtc": "2026-11-22T01:00:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601909", "league": "NBA", "homeTeamId": "nba-uta", "awayTeamId": "nba-dal", "startTimeUtc": "2026-11-23T00:00:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601914", "league": "NBA", "homeTeamId": "nba-phi", "awayTeamId": "nba-por", "startTimeUtc": "2026-11-24T00:00:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601924", "league": "NBA", "homeTeamId": "nba-was", "awayTeamId": "nba-bos", "startTimeUtc": "2026-11-25T01:00:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601925", "league": "NBA", "homeTeamId": "nba-den", "awayTeamId": "nba-dal", "startTimeUtc": "2026-11-25T03:00:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601932", "league": "NBA", "homeTeamId": "nba-mil", "awayTeamId": "nba-chi", "startTimeUtc": "2026-11-26T01:00:00Z", "status": "canceled" },
+    { "id": "tsdb:2601940", "league": "NBA", "homeTeamId": "nba-bos", "awayTeamId": "nba-phi", "startTimeUtc": "2026-11-27T00:30:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601941", "league": "NBA", "homeTeamId": "nba-phi", "awayTeamId": "nba-bos", "startTimeUtc": "2026-12-02T00:30:00Z", "status": "scheduled" },
+    { "id": "tsdb:2601931", "league": "NBA", "homeTeamId": "nba-hou", "awayTeamId": "nba-mia", "startTimeUtc": null, "status": "postponed" }
+  ]
+}
